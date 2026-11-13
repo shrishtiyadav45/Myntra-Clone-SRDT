@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">MYNTRA</div>
+
+    <nav>
+        <a href="#">MEN</a>
+        <a href="#">WOMEN</a>
+        <a href="#">KIDS</a>
+        <a href="#">HOME</a>
+        <a href="#">BEAUTY</a>
+    </nav>
+
+    <input type="text" id="search"
+    placeholder="Search for products...">
+
+    <div class="icons">
+        <span>Profile</span>
+        <span>Wishlist</span>
+        <span>Bag (<b id="cartCount">0</b>)</span>
+    </div>
+</header>
+
+<section class="banner">
+    <h1>BIG FASHION FESTIVAL</h1>
+    <h2>UP TO 70% OFF</h2>
+    <p>Discover Your Style Today</p>
+    <button onclick="showProducts()">SHOP NOW</button>
+</section>
+
+<section class="products" id="products">
+
+    <h2>Trending Products</h2>
+
+    <div class="product-container" id="productContainer">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
+            <h3>Men Casual T-Shirt</h3>
+            <p>₹499</p>
+            <button onclick="addToCart()">Add to Bag</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500">
+            <h3>Women Fashion Dress</h3>
+            <p>₹999</p>
+            <button onclick="addToCart()">Add to Bag</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+            <h3>Sports Shoes</h3>
+            <p>₹1499</p>
+            <button onclick="addToCart()">Add to Bag</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500">
+            <h3>Fashion Handbag</h3>
+            <p>₹799</p>
+            <button onclick="addToCart()">Add to Bag</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>MYNTRA CLONE</h3>
+    <p>Created using HTML, CSS and JavaScript</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
