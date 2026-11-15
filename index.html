@@ -4,81 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myntra Clone</title>
+    <meta name="description" content="Discover the latest fashion trends at StyleAura.">
+    <title>StyleAura | Fashion Store</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <div class="logo">MYNTRA</div>
+<header class="header">
+    <a href="#" class="logo">STYLE<span>AURA</span></a>
 
-    <nav>
-        <a href="#">MEN</a>
-        <a href="#">WOMEN</a>
-        <a href="#">KIDS</a>
-        <a href="#">HOME</a>
-        <a href="#">BEAUTY</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="nav">
+        <a href="#products" data-category="Men">MEN</a>
+        <a href="#products" data-category="Women">WOMEN</a>
+        <a href="#products" data-category="Kids">KIDS</a>
+        <a href="#products" data-category="Beauty">BEAUTY</a>
+        <a href="#products" data-category="Home">HOME</a>
     </nav>
 
-    <input type="text" id="search"
-    placeholder="Search for products...">
+    <div class="search-box">
+        <span>⌕</span>
+        <input type="search" id="searchInput"
+        placeholder="Search for products, brands and more...">
+    </div>
 
-    <div class="icons">
-        <span>Profile</span>
-        <span>Wishlist</span>
-        <span>Bag (<b id="cartCount">0</b>)</span>
+    <div class="header-actions">
+        <button id="profileBtn">♙<small>Profile</small></button>
+        <button id="wishlistBtn">♡<small>Wishlist <b id="wishCount">0</b></small></button>
+        <button id="cartBtn">▢<small>Bag <b id="cartCount">0</b></small></button>
     </div>
 </header>
 
-<section class="banner">
-    <h1>BIG FASHION FESTIVAL</h1>
-    <h2>UP TO 70% OFF</h2>
-    <p>Discover Your Style Today</p>
-    <button onclick="showProducts()">SHOP NOW</button>
-</section>
+<main>
 
-<section class="products" id="products">
-
-    <h2>Trending Products</h2>
-
-    <div class="product-container" id="productContainer">
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
-            <h3>Men Casual T-Shirt</h3>
-            <p>₹499</p>
-            <button onclick="addToCart()">Add to Bag</button>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag">THE NEW SEASON COLLECTION</span>
+            <h1>Fashion is<br>your <span>identity.</span></h1>
+            <p>Discover the latest styles. Express yourself with confidence.</p>
+            <a href="#products" class="primary-btn">EXPLORE COLLECTION ↗</a>
+            <div class="hero-note">NEW ARRIVALS · FRESH STYLES · GREAT PRICES</div>
         </div>
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500">
-            <h3>Women Fashion Dress</h3>
-            <p>₹999</p>
-            <button onclick="addToCart()">Add to Bag</button>
+        <div class="hero-visual">
+            <div class="circle"></div>
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900"
+                 alt="Fashion collection">
+            <div class="floating-card">
+                <small>NEW COLLECTION</small>
+                <h3>Own<br>Your Style.</h3>
+                <span>2026 EDITION</span>
+            </div>
+            <div class="discount">UP TO<br><b>50% OFF</b></div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div>✦ <span><b>Latest Trends</b><small>Fresh fashion every week</small></span></div>
+        <div>◇ <span><b>Easy Shopping</b><small>Simple shopping experience</small></span></div>
+        <div>↗ <span><b>Great Prices</b><small>Style within your budget</small></span></div>
+        <div>♡ <span><b>Your Wishlist</b><small>Save your favourite styles</small></span></div>
+    </section>
+
+    <section class="category-section">
+        <div class="section-heading">
+            <div>
+                <span class="tag">EXPLORE YOUR STYLE</span>
+                <h2>Shop by Category</h2>
+            </div>
         </div>
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
-            <h3>Sports Shoes</h3>
-            <p>₹1499</p>
-            <button onclick="addToCart()">Add to Bag</button>
+        <div class="category-grid">
+            <button class="category-card" data-category="Men">
+                <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=600" alt="Men fashion">
+                <span>MEN <b>→</b></span>
+            </button>
+
+            <button class="category-card" data-category="Women">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Women fashion">
+                <span>WOMEN <b>→</b></span>
+            </button>
+
+            <button class="category-card" data-category="Kids">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600" alt="Kids fashion">
+                <span>KIDS <b>→</b></span>
+            </button>
+
+            <button class="category-card" data-category="Footwear">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Footwear">
+                <span>FOOTWEAR <b>→</b></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="section-heading">
+            <div>
+                <span class="tag">HANDPICKED FOR YOU</span>
+                <h2>Trending Collection</h2>
+                <p class="subheading">Find something that matches your personality.</p>
+            </div>
+
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="All">All Categories</option>
+                    <option value="Men">Men</option>
+                    <option value="Women">Women</option>
+                    <option value="Kids">Kids</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Home">Home</option>
+                </select>
+
+                <select id="sortFilter">
+                    <option value="featured">Featured</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                </select>
+            </div>
         </div>
 
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500">
-            <h3>Fashion Handbag</h3>
-            <p>₹799</p>
-            <button onclick="addToCart()">Add to Bag</button>
+        <div class="product-count" id="productCount"></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+            <h3>No products found!</h3>
+            <p>Try another search or category.</p>
         </div>
+    </section>
 
-    </div>
-</section>
+    <section class="promo">
+        <div>
+            <span class="tag">LIMITED TIME COLLECTION</span>
+            <h2>Make every outfit<br>count.</h2>
+            <p>Upgrade your wardrobe with the latest styles.</p>
+            <a href="#products" class="primary-btn">SHOP NOW ↗</a>
+        </div>
+        <div class="promo-symbol">S<span>A</span></div>
+    </section>
+
+    <section class="newsletter">
+        <span class="tag">STAY CONNECTED</span>
+        <h2>Style updates, delivered.</h2>
+        <p>Subscribe to discover new arrivals and fashion updates.</p>
+
+        <form id="newsletterForm">
+            <input type="email" id="emailInput"
+            placeholder="Enter your email address" required>
+            <button type="submit">SUBSCRIBE →</button>
+        </form>
+    </section>
+
+</main>
 
 <footer>
-    <h3>MYNTRA CLONE</h3>
-    <p>Created using HTML, CSS and JavaScript</p>
-    <p>© 2026 All Rights Reserved</p>
+    <a href="#" class="logo">STYLE<span>AURA</span></a>
+    <p>Fashion is not just what you wear. It's how you express yourself.</p>
+    <div class="footer-links">
+        <a href="#products">Shop</a>
+        <a href="#products">Collections</a>
+        <a href="#products">Trending</a>
+    </div>
+    <small>© 2026 StyleAura. Student Project. Not affiliated with Myntra.</small>
 </footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+        <h2>Your Shopping Bag</h2>
+        <button id="closeCart">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="total-row">
+            <span>Total Amount</span>
+            <strong id="cartTotal">₹0</strong>
+        </div>
+        <button id="checkoutBtn" class="primary-btn full-btn">
+            CONTINUE SHOPPING
+        </button>
+        <small>Demo storefront — no real payment is collected.</small>
+    </div>
+</aside>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="quick-modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <script src="script.js"></script>
 </body>
