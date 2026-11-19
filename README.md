@@ -135,7 +135,6 @@ This is an educational frontend project.
 
 ## 👨‍💻 Developer
 
-**Ayush Dubey**
 
 B.Tech CSE – Artificial Intelligence & Machine Learning
 
